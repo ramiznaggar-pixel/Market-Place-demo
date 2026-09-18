@@ -1,0 +1,143 @@
+.drop {
+  position: relative;
+}
+.drop > button {
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 12px;
+}
+.drop-menu {
+  display: none;
+  position: absolute;
+  top: 22px;
+  left: -14px;
+  width: 180px;
+  background: #141724;
+  border: 1px solid var(--line);
+  padding: 9px;
+  box-shadow: 0 20px 50px #0008;
+}
+.drop:hover .drop-menu,
+.drop:focus-within .drop-menu {
+  display: grid;
+}
+.drop-menu a {
+  padding: 10px;
+  font-size: 12px;
+}
+.drop-menu a:hover {
+  background: var(--soft);
+  color: var(--lime);
+}
+.chatbot {
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  bottom: 20px;
+  width: min(370px, calc(100vw - 40px));
+  background: #131623;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 80px #0009;
+}
+.chat-head {
+  padding: 15px;
+  border-bottom: 1px solid var(--line);
+  font: 11px "DM Mono";
+  color: var(--lime);
+}
+.chat-head button {
+  float: right;
+  border: 0;
+  background: none;
+  color: white;
+  font-size: 20px;
+}
+.chat-log {
+  height: 280px;
+  overflow: auto;
+  padding: 15px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.chat-log p {
+  background: #1b1e2d;
+  padding: 10px;
+  margin: 0 0 8px;
+}
+.chat-log .user {
+  background: #32304b;
+}
+.chat-log a {
+  color: var(--lime);
+}
+#chatForm {
+  display: flex;
+  border-top: 1px solid var(--line);
+}
+#chatForm input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: white;
+  padding: 13px;
+  flex: 1;
+}
+#chatForm button {
+  background: var(--lime);
+  border: 0;
+  padding: 0 15px;
+  font-weight: 800;
+}
+.simple-page {
+  width: min(1100px, 90vw);
+  margin: auto;
+  padding: 70px 0;
+}
+.simple-page h1 {
+  font: clamp(44px, 7vw, 76px) "Space Grotesk";
+  letter-spacing: -0.07em;
+}
+.simple-page h1 em {
+  color: var(--violet);
+  font-style: normal;
+}
+.checkout {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 25px;
+}
+.summary {
+  background: var(--panel);
+  padding: 25px;
+  border: 1px solid var(--line);
+  height: max-content;
+}
+.summary input {
+  width: 100%;
+  background: #0c0e15;
+  border: 1px solid var(--line);
+  padding: 12px;
+  color: white;
+  margin: 8px 0;
+}
+.order-confirm {
+  padding: 20px;
+  background: #203023;
+  color: var(--lime);
+  margin-top: 15px;
+}
+@media (max-width: 850px) {
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+  .drop-menu {
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    width: auto;
+  }
+  .drop {
+    display: none;
+  }
+}

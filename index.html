@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NOVA — The future marketplace</title>
+    <link rel="stylesheet" href="assets/css/nova.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body>
+    <main>
+      <section class="page hero">
+        <div>
+          <p class="kicker">THE FUTURE OF FINDING</p>
+          <h1>Everything you love.<br /><em>Intelligently found.</em></h1>
+          <p class="sub">
+            A marketplace that feels personal: explore hundreds of
+            possibilities, ask the AI concierge, and check out with confidence.
+          </p>
+          <div class="actions">
+            <a class="primary" href="pages/shop.html">Explore marketplace →</a
+            ><button class="secondary" id="openChat">Ask NOVA AI</button>
+          </div>
+          <div class="hero-stats">
+            <div><strong>24h</strong>Cairo delivery</div>
+            <div><strong>4.9/5</strong>verified rating</div>
+            <div><strong>100%</strong>secure checkout</div>
+          </div>
+        </div>
+        <div class="hero-board">
+          <span class="live">NOVA INTELLIGENCE ONLINE</span>
+          <div class="orbit"></div>
+          <span class="live"
+            >REAL INVENTORY / PERSONAL EDITS / FAST CHECKOUT</span
+          >
+        </div>
+      </section>
+      <section class="page">
+        <div class="section-head">
+          <div>
+            <p class="kicker">START EXPLORING</p>
+            <h2>A real marketplace.</h2>
+          </div>
+        </div>
+        <div class="category-grid">
+          <a class="category" href="pages/shop.html">SHOP ALL</a
+          ><a class="category" href="pages/new.html">NEW ARRIVALS</a
+          ><a class="category" href="pages/trending.html">TRENDING</a>
+        </div>
+      </section>
+    </main>
+    <script type="module">
+      import { boot } from "./assets/js/core.js";
+      boot();
+      document.querySelectorAll("header a").forEach((a) => {
+        let h = a.getAttribute("href");
+        if (h === "../index.html") a.href = "index.html";
+        else if (h && !h.includes("://")) a.href = "pages/" + h;
+      });
+    </script>
+  </body>
+</html>
